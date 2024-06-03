@@ -1,0 +1,35 @@
+﻿
+@{
+    string Titulo = ViewBag.Title = "Días Festivos";
+}
+
+<main>
+    <div>
+        <h2>@Titulo</h2>
+        <div class="ControlesDiasFestivos">
+            <div>
+                <select id="SelectPaises">
+                    <option id="option_1" style="display:none;"> SELECCIONAR PAÍS</option>
+                    <option value="MX">MÉXICO</option>
+                    <option value="US">UNITED STATES</option>
+                    <option value="FR">FRANCE</option>
+                </select>
+            </div>
+
+            <div>
+                <button class="btn btn-outline-dark" id="btnConsultarDiasF" onclick="ConsultarDiasFestivos()">CONSULTAR</button>
+            </div>
+        </div>
+
+        <div id="divListaDesordenada" class="divListaDesordenada">
+            
+        </div>
+    </div>
+    
+    <div id="divLiDiasFestivos">
+        
+    </div> 
+</main>
+<script src="~/Scripts/DiasFestivos.js"></script>
+
+

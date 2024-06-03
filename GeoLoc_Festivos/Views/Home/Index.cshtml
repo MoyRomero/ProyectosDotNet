@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Datarial Test";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">Datarial Test</h1>
+        <p class="lead">Consumo de la API GeoLoc y Date.Nager.</p>
+    </section>
+
+    <div class="row">
+        <section class="col-md-5" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle">Test: 1 (GeoLoc API)</h2>
+            <p>Ip country API: <a href="https://ip-api.com/">https://ip-api.com/</a></p>
+            <p>Utilizar el API para identificar el país de una dirección IP que se quiera conocer el origen</p>
+            <p>@Html.ActionLink("ACCEDER", "Index", "GeoLoc", new { area = "" }, new { @class = "btn btn-outline-dark" })</p>
+        </section>
+
+        <section class="col-md-5" aria-labelledby="librariesTitle">
+            <h2 id="librariesTitle">Test: 2 (Dias Festivos API)</h2>
+            <p>API Date.Nager Url: <a href="https://date.nager.at/api/v3/PublicHolidays/2023/MX">https://date.nager.at/api/v3/PublicHolidays/2023/MX</a></p>
+            <p>Crear un droplist y un botón, para mostrar la Información de los días festivos por cada país.</p>
+            <p>@Html.ActionLink("ACCEDER", "Index", "DiasFestivos", new { area = "" }, new { @class = "btn btn-outline-dark" })</p>
+        </section>
+
+        @*<section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle">Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </section>*@
+    </div>
+</main>

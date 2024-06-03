@@ -1,0 +1,56 @@
+﻿@using ClimaApiCore.DTOs
+@model LatitudLongitudDTO
+@{
+	DatosClimaActualDTO DatosClima = (DatosClimaActualDTO)ViewBag.DatosClima;
+	CoordenadasDTO? coordenadas = (CoordenadasDTO)ViewBag.Coordenadas;
+}
+
+<section class="form-control Centrar flex-column">
+	<h1 class="Centrar">CONSULTA DATOS SOBRE EL CLIMA</h1>
+
+	<form class=" form-control formulario" asp-action="Index" method="post">
+
+		<label asp-for="Latitud"></label>
+		<input asp-for="Latitud" value="@(coordenadas?.lat != null ? coordenadas?.lat : Model?.Latitud)" />
+		<span asp-validation-for="Latitud" class="text-danger"></span>
+
+		<label asp-for="Longitud"></label>
+		<input asp-for="Longitud" value="@(coordenadas?.lon != null ? coordenadas?.lon : Model?.Longitud)" />
+		<span asp-validation-for="Longitud" class="text-danger"></span>
+
+		<button type="submit" class="btn btn-danger">CONSULTAR</button>
+
+	</form>
+
+	<hr />
+
+	@if (DatosClima != null)
+	{
+		<table class="table table-hover table-bordered table-responsive">
+			<thead>
+				<tr>
+					<th>@Html.LabelFor(x => DatosClima.data[0].city_name)</th>
+					<th>@Html.LabelFor(x => DatosClima.data[0].country_code)</th>
+					<th>@Html.LabelFor(x => DatosClima.data[0].datetime)</th>
+					<th>@Html.LabelFor(x => DatosClima.data[0].temp)</th>
+					<th>@Html.LabelFor(x => DatosClima.data[0].timezone)</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				@foreach(var item in DatosClima.data)
+				{
+					<tr>
+						<td>@item.city_name</td>
+						<td>@item.country_code</td>
+						<td>@item.datetime</td>
+						<td>@item.temp</td>
+						<td>@item.timezone</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	}
+</section>
+
+

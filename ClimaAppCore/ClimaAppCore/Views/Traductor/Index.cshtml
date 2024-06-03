@@ -1,0 +1,41 @@
+﻿@using ClimaApiCore.DTOs
+@model TextoParaTraducir
+
+@{
+	TraduccionesDTO TextoTraducido = (TraduccionesDTO)ViewBag.TextoTraducido;
+}
+
+<div class="contenedor">
+
+	<h1>TRADUCTOR DE TEXTOS: INGLÉS -> ESPAÑOL</h1>
+
+	<form class="form-control Centrar formulario" asp-action="Index" method="post">
+
+		<label asp-for="text"></label>
+		<input asp-for="text"/>
+		<span asp-validation-for="text"></span>
+
+		<button type="submit" class="btn btn-primary">TRADUCIR</button>
+	</form>
+
+	@if(TextoTraducido != null)
+	{
+		<div class="TraduccionContenedor">
+
+			<h4>TRADUCCIÓN:</h4>
+
+			<div class="ParrafoTraducido">
+
+				<span>Inglés: <b>@Model.text</b> / Español: </span>
+
+				@foreach (var Palabra in TextoTraducido.data.translations)
+				{
+					<span class="PalabraSpan"><b>@Palabra.translatedText</b></span>
+					;
+				}
+			</div>
+
+		</div>
+	}
+</div>
+

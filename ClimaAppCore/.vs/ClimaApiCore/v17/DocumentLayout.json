@@ -1,0 +1,140 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|c:\\users\\moyro\\source\\repos\\pruebas_cronometradas\\climaappcore\\climaappcore\\controllers\\traductorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|solutionrelative:climaappcore\\controllers\\traductorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|c:\\users\\moyro\\source\\repos\\pruebas_cronometradas\\climaappcore\\climaappcore\\wwwroot\\js\\solicitudes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|solutionrelative:climaappcore\\wwwroot\\js\\solicitudes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|c:\\users\\moyro\\source\\repos\\pruebas_cronometradas\\climaappcore\\climaappcore\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|solutionrelative:climaappcore\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|c:\\users\\moyro\\source\\repos\\pruebas_cronometradas\\climaappcore\\climaappcore\\views\\traductor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|solutionrelative:climaappcore\\views\\traductor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|c:\\users\\moyro\\source\\repos\\pruebas_cronometradas\\climaappcore\\climaappcore\\dtos\\textoparatraducir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|solutionrelative:climaappcore\\dtos\\textoparatraducir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|c:\\users\\moyro\\source\\repos\\pruebas_cronometradas\\climaappcore\\climaappcore\\dtos\\traduccionesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C926C5C7-0B87-4C19-A961-EE5BD9879BA7}|ClimaAppCore\\ClimaApiCore.csproj|solutionrelative:climaappcore\\dtos\\traduccionesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 215,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Solicitudes.js",
+              "DocumentMoniker": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\wwwroot\\js\\Solicitudes.js",
+              "RelativeDocumentMoniker": "ClimaAppCore\\wwwroot\\js\\Solicitudes.js",
+              "ToolTip": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\wwwroot\\js\\Solicitudes.js",
+              "RelativeToolTip": "ClimaAppCore\\wwwroot\\js\\Solicitudes.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-03T21:39:30.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "ClimaAppCore\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "ClimaAppCore\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAQwGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-03T21:21:11.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\Views\\Traductor\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClimaAppCore\\Views\\Traductor\\Index.cshtml",
+              "ToolTip": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\Views\\Traductor\\Index.cshtml",
+              "RelativeToolTip": "ClimaAppCore\\Views\\Traductor\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-03T20:56:20.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TraduccionesDTO.cs",
+              "DocumentMoniker": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\DTOs\\TraduccionesDTO.cs",
+              "RelativeDocumentMoniker": "ClimaAppCore\\DTOs\\TraduccionesDTO.cs",
+              "ToolTip": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\DTOs\\TraduccionesDTO.cs",
+              "RelativeToolTip": "ClimaAppCore\\DTOs\\TraduccionesDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T20:50:21.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TextoParaTraducir.cs",
+              "DocumentMoniker": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\DTOs\\TextoParaTraducir.cs",
+              "RelativeDocumentMoniker": "ClimaAppCore\\DTOs\\TextoParaTraducir.cs",
+              "ToolTip": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\DTOs\\TextoParaTraducir.cs",
+              "RelativeToolTip": "ClimaAppCore\\DTOs\\TextoParaTraducir.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T20:45:06.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TraductorController.cs",
+              "DocumentMoniker": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\Controllers\\TraductorController.cs",
+              "RelativeDocumentMoniker": "ClimaAppCore\\Controllers\\TraductorController.cs",
+              "ToolTip": "C:\\Users\\moyro\\source\\repos\\Pruebas_Cronometradas\\ClimaAppCore\\ClimaAppCore\\Controllers\\TraductorController.cs",
+              "RelativeToolTip": "ClimaAppCore\\Controllers\\TraductorController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T19:25:20.962Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 185,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

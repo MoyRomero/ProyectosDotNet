@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "GeoLoc";
+}
+
+<main>
+    <div class="divGeoLoc">
+        <div>
+            <h2>GeoLoc API</h2>
+        </div>       
+        <div>
+            <span>Dirección IP:</span>
+            <span id="DireccionIp">No recuperada.</span>
+        </div>
+        <div>
+            <span>País:</span>
+            <span id="PaisSpan">No recuperado.</span>
+        </div>
+        <div>
+            <span>Ciudad:</span>
+            <span id="CiudadSpan">No recuperado.</span>
+        </div>
+        <div>
+            <button id="btnObtenerIP" onclick="ObtenerDatosGeoLoc()" class="btn btn-outline-dark">OBTENER IP</button>
+        </div>
+    </div>
+</main>
+
+<script src="~/Scripts/GeoLoc.js"></script>
+
+

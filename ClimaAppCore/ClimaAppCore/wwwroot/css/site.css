@@ -1,0 +1,96 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.Centrar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 300px;
+}
+
+.formulario input{
+    text-align:center;
+}
+
+.formulario button{
+    margin:20px auto 10px;
+}
+
+
+.ipInfoClases{
+
+    margin:auto;
+    max-width:800px;
+}
+
+    .ipInfoClases h1{
+        text-align:center;
+    }
+    .ipInfoClases label{
+        font-weight:700;
+    }
+    .ipInfoClases label::after{
+        content:":"
+    }
+    .ipInfoClases span{
+        color:#00a;
+    }
+    .ipInfoClases span::after {
+        content:"✔️"
+    }
+
+
+
+
+/*------------ESTILOS TRADUCTOR API--------------------*/
+
+.contenedor{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    padding:20px;
+}
+
+.contenedor h1{
+    margin:auto;
+}
+
+.TraduccionContenedor {
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 20px;
+    background:#0091;
+    max-width:300px;
+    margin:auto;
+    border-radius:10px;
+}

@@ -1,0 +1,43 @@
+﻿@using ClimaApiCore.DTOs
+@model ipDatosDTO
+
+
+<div class="form-control ipInfoClases">
+
+	<h1>CONSULTAR DATOS MEDIANTE TU IP</h1>	
+	<hr />
+		@if(Model != null)
+		{
+			<label asp-for="@Model.ip"></label>
+			<span>@Model.ip</span>
+			<hr />
+
+			<label asp-for="@Model.hostname"></label>
+			<span>@Model.hostname</span>
+			<hr />
+
+			<label asp-for="@Model.city"></label>
+			<span>@Model.city</span>
+			<hr />
+
+			<label asp-for="@Model.region"></label>
+			<span>@Model.region</span>
+			<hr />
+
+			<label asp-for="@Model.country"></label>
+			<span>@Model.country</span>
+			<hr />
+
+			<label asp-for="@Model.loc"></label>
+			<span>@Model.loc</span>
+			<hr />
+
+			<label asp-for="@Model.postal"></label>
+			<span>@Model.postal</span>
+			<hr />
+
+			<label asp-for="@Model.timezone"></label>
+			<span>@Model.timezone</span>
+		}
+
+</div>

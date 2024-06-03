@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ReservaCine" Class="ReservaCineDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LENOVOM95\SQLEXPRESS;Initial Catalog=ReservaCine;Integrated Security=True" SettingsObjectName="SistemaReservaCine.Properties.Settings" SettingsPropertyName="ReservaCineConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BUTACA" Member="BUTACA">
+    <Type Name="BUTACA">
+      <Column Name="IDFUNCION" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDBUTACA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="INDICEFILA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="INDICECOLUMNA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BLIBRE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FUNCION_BUTACA" Member="FUNCION" ThisKey="IDFUNCION" OtherKey="IDFUNCION" Type="FUNCION" IsForeignKey="true" />
+      <Association Name="FUNCION_BUTACA1" Member="FUNCION1" ThisKey="IDFUNCION" OtherKey="IDFUNCION" Type="FUNCION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPOMODALIDAD" Member="TIPOMODALIDAD">
+    <Type Name="TIPOMODALIDAD">
+      <Column Name="IDTIPOMODALIDAD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TIPOMODALIDAD_EMPLEADO" Member="EMPLEADO" ThisKey="IDTIPOMODALIDAD" OtherKey="IDTIPOMODALIDAD" Type="EMPLEADO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CINE" Member="CINE">
+    <Type Name="CINE">
+      <Column Name="IDCINE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IDTIPOCINE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FECHAAPERTURA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CINE_FUNCION" Member="FUNCION" ThisKey="IDCINE" OtherKey="IDCINE" Type="FUNCION" />
+      <Association Name="CINE_SALA" Member="SALA" ThisKey="IDCINE" OtherKey="IDCINE" Type="SALA" />
+      <Association Name="TIPOCINE_CINE" Member="TIPOCINE" ThisKey="IDTIPOCINE" OtherKey="IDTIPOCINE" Type="TIPOCINE" IsForeignKey="true" />
+      <Association Name="TIPOCINE_CINE1" Member="TIPOCINE1" ThisKey="IDTIPOCINE" OtherKey="IDTIPOCINE" Type="TIPOCINE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTE" Member="CLIENTE">
+    <Type Name="CLIENTE">
+      <Column Name="IDCLIENTE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DNICLIENTE" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="APPATERNO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APMATERNO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FECHANAC" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TELEFONOFIJO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TELEFONOCELULAR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IDSEXO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CLIENTE_RESERVA" Member="RESERVA" ThisKey="IDCLIENTE" OtherKey="IDCLIENTE" Type="RESERVA" />
+      <Association Name="CLIENTE_DETALLERESERVA" Member="DETALLERESERVA" ThisKey="IDCLIENTE" OtherKey="IDCLIENTE" Type="DETALLERESERVA" />
+      <Association Name="SEXO_CLIENTE" Member="SEXO" ThisKey="IDSEXO" OtherKey="IDSEXO" Type="SEXO" IsForeignKey="true" />
+      <Association Name="SEXO_CLIENTE1" Member="SEXO1" ThisKey="IDSEXO" OtherKey="IDSEXO" Type="SEXO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPLEADO" Member="EMPLEADO">
+    <Type Name="EMPLEADO">
+      <Column Name="IDEMPLEADO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBREEMPLEADO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APPATERNO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APMATERNO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SUELDO" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FECHAINICIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDTIPOMODALIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDTIPOEMPLEADO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USUARIO" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="CONTRA" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BBLOQUEADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="EMPLEADO_RESERVA" Member="RESERVA" ThisKey="IDEMPLEADO" OtherKey="IDEMPLEADO" Type="RESERVA" />
+      <Association Name="TIPOMODALIDAD_EMPLEADO" Member="TIPOMODALIDAD" ThisKey="IDTIPOMODALIDAD" OtherKey="IDTIPOMODALIDAD" Type="TIPOMODALIDAD" IsForeignKey="true" />
+      <Association Name="TIPOEMPLEADO_EMPLEADO" Member="TIPOEMPLEADO" ThisKey="IDTIPOEMPLEADO" OtherKey="IDTIPOEMPLEADO" Type="TIPOEMPLEADO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FUNCION" Member="FUNCION">
+    <Type Name="FUNCION">
+      <Column Name="IDFUNCION" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FECHAFUNCION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDPELICULA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDCINE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDSALA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FUNCION_BUTACA" Member="BUTACA" ThisKey="IDFUNCION" OtherKey="IDFUNCION" Type="BUTACA" />
+      <Association Name="FUNCION_BUTACA1" Member="BUTACA1" ThisKey="IDFUNCION" OtherKey="IDFUNCION" Type="BUTACA" />
+      <Association Name="FUNCION_FUNCIONENTRADA" Member="FUNCIONENTRADA" ThisKey="IDFUNCION" OtherKey="IDFUNCION" Type="FUNCIONENTRADA" />
+      <Association Name="FUNCION_DETALLERESERVA" Member="DETALLERESERVA" ThisKey="IDFUNCION" OtherKey="IDFUNCION" Type="DETALLERESERVA" />
+      <Association Name="CINE_FUNCION" Member="CINE" ThisKey="IDCINE" OtherKey="IDCINE" Type="CINE" IsForeignKey="true" />
+      <Association Name="PELICULA_FUNCION" Member="PELICULA" ThisKey="IDPELICULA" OtherKey="IDPELICULA" Type="PELICULA" IsForeignKey="true" />
+      <Association Name="SALA_FUNCION" Member="SALA" ThisKey="IDSALA" OtherKey="IDSALA" Type="SALA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FUNCIONENTRADA" Member="FUNCIONENTRADA">
+    <Type Name="FUNCIONENTRADA">
+      <Column Name="IDFUNCION" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDTIPOENTRADA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PRECIO" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="FUNCION_FUNCIONENTRADA" Member="FUNCION" ThisKey="IDFUNCION" OtherKey="IDFUNCION" Type="FUNCION" IsForeignKey="true" />
+      <Association Name="TIPOENTRADA_FUNCIONENTRADA" Member="TIPOENTRADA" ThisKey="IDTIPOENTRADA" OtherKey="IDTIPOENTRADA" Type="TIPOENTRADA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GENERO" Member="GENERO">
+    <Type Name="GENERO">
+      <Column Name="IDGENERO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="GENERO_PELICULA" Member="PELICULA" ThisKey="IDGENERO" OtherKey="IDGENERO" Type="PELICULA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAIS" Member="PAIS">
+    <Type Name="PAIS">
+      <Column Name="IDPAIS" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="PAIS_PELICULA" Member="PELICULA" ThisKey="IDPAIS" OtherKey="IDPAIS" Type="PELICULA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PELICULA" Member="PELICULA">
+    <Type Name="PELICULA">
+      <Column Name="IDPELICULA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TITULO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FECHAESTRENO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IDGENERO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDPAIS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SINOPSIS" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="DURACION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDTIPOCENSURA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PELICULA_FUNCION" Member="FUNCION" ThisKey="IDPELICULA" OtherKey="IDPELICULA" Type="FUNCION" />
+      <Association Name="GENERO_PELICULA" Member="GENERO" ThisKey="IDGENERO" OtherKey="IDGENERO" Type="GENERO" IsForeignKey="true" />
+      <Association Name="PAIS_PELICULA" Member="PAIS" ThisKey="IDPAIS" OtherKey="IDPAIS" Type="PAIS" IsForeignKey="true" />
+      <Association Name="TIPOCENSURA_PELICULA" Member="TIPOCENSURA" ThisKey="IDTIPOCENSURA" OtherKey="IDTIPOCENSURA" Type="TIPOCENSURA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RESERVA" Member="RESERVA">
+    <Type Name="RESERVA">
+      <Column Name="IDRESERVA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDCLIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDEMPLEADO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTAL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="RESERVA_DETALLERESERVA" Member="DETALLERESERVA" ThisKey="IDRESERVA" OtherKey="IDRESERVA" Type="DETALLERESERVA" />
+      <Association Name="CLIENTE_RESERVA" Member="CLIENTE" ThisKey="IDCLIENTE" OtherKey="IDCLIENTE" Type="CLIENTE" IsForeignKey="true" />
+      <Association Name="EMPLEADO_RESERVA" Member="EMPLEADO" ThisKey="IDEMPLEADO" OtherKey="IDEMPLEADO" Type="EMPLEADO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SALA" Member="SALA">
+    <Type Name="SALA">
+      <Column Name="IDSALA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDCINE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NUMBUTACAS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NUMEROFILAS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NUMEROCOLUMNAS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="SALA_FUNCION" Member="FUNCION" ThisKey="IDSALA" OtherKey="IDSALA" Type="FUNCION" />
+      <Association Name="CINE_SALA" Member="CINE" ThisKey="IDCINE" OtherKey="IDCINE" Type="CINE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SEXO" Member="SEXO">
+    <Type Name="SEXO">
+      <Column Name="IDSEXO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="SEXO_CLIENTE" Member="CLIENTE" ThisKey="IDSEXO" OtherKey="IDSEXO" Type="CLIENTE" />
+      <Association Name="SEXO_CLIENTE1" Member="CLIENTE1" ThisKey="IDSEXO" OtherKey="IDSEXO" Type="CLIENTE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPOCENSURA" Member="TIPOCENSURA">
+    <Type Name="TIPOCENSURA">
+      <Column Name="IDTIPOCENSURA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TIPOCENSURA_PELICULA" Member="PELICULA" ThisKey="IDTIPOCENSURA" OtherKey="IDTIPOCENSURA" Type="PELICULA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPOCINE" Member="TIPOCINE">
+    <Type Name="TIPOCINE">
+      <Column Name="IDTIPOCINE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TIPOCINE_CINE" Member="CINE" ThisKey="IDTIPOCINE" OtherKey="IDTIPOCINE" Type="CINE" />
+      <Association Name="TIPOCINE_CINE1" Member="CINE1" ThisKey="IDTIPOCINE" OtherKey="IDTIPOCINE" Type="CINE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPOEMPLEADO" Member="TIPOEMPLEADO">
+    <Type Name="TIPOEMPLEADO">
+      <Column Name="IDTIPOEMPLEADO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TIPOEMPLEADO_EMPLEADO" Member="EMPLEADO" ThisKey="IDTIPOEMPLEADO" OtherKey="IDTIPOEMPLEADO" Type="EMPLEADO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPOENTRADA" Member="TIPOENTRADA">
+    <Type Name="TIPOENTRADA">
+      <Column Name="IDTIPOENTRADA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TIPOENTRADA_FUNCIONENTRADA" Member="FUNCIONENTRADA" ThisKey="IDTIPOENTRADA" OtherKey="IDTIPOENTRADA" Type="FUNCIONENTRADA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DETALLERESERVA" Member="DETALLERESERVA">
+    <Type Name="DETALLERESERVA">
+      <Column Name="IDRESERVA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDCLIENTE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PRECIO" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IDFUNCION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDBUTACA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BHABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CLIENTE_DETALLERESERVA" Member="CLIENTE" ThisKey="IDCLIENTE" OtherKey="IDCLIENTE" Type="CLIENTE" IsForeignKey="true" />
+      <Association Name="FUNCION_DETALLERESERVA" Member="FUNCION" ThisKey="IDFUNCION" OtherKey="IDFUNCION" Type="FUNCION" IsForeignKey="true" />
+      <Association Name="RESERVA_DETALLERESERVA" Member="RESERVA" ThisKey="IDRESERVA" OtherKey="IDRESERVA" Type="RESERVA" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
